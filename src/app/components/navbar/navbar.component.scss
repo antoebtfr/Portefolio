@@ -31,4 +31,43 @@ ul{
 
 li{
     margin: 0 10px;
+    transition: 0.3s;
+}
+li:hover{
+    font-weight: 700;
+}
+
+li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#linkedin::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-image: url(https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_gray-512.png);
+    background-size: cover;
+    margin-right: 5px;
+}
+
+#github::before{
+    content: "";
+    width: 35px;
+    height: 25px;
+    display: inline-block;
+    background-image: url(https://www.sferalabs.cc/wp-content/uploads/github-logo-white.png);
+    background-size: cover;
+}
+
+#codepen::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-image: url(https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-White-Large.png);
+    background-size: cover;
+    margin-right: 5px;
 }

@@ -37,6 +37,12 @@
     justify-content: center;
     border-radius: 20px;
     border: solid white 2px;
+    transition: 0.3s;
+}
+
+.language:hover{
+  background-color: #fff;
+  color: black;
 }
 
 #cadre-languages {
