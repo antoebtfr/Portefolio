@@ -46,3 +46,18 @@
   display: flex;
   justify-content: center;
 }
+
+#bio{
+  width: 100vw;
+  position: relative;
+  top: -7.5vw;
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+#particles-js{
+  position: fixed;
+  width:100%;
+}
