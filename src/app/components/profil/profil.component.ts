@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProfilComponent implements OnInit {
   // Variables
 
-  public languages = ['HTML', 'CSS', 'JavaScript' , 'NodeJS', 'PHP', 'Python', 'C', 'Angular'];
+  public languages = ['HTML', 'CSS', 'JavaScript' , 'NodeJS', 'PHP', 'Python', 'C', 'Angular', 'SQL'];
   constructor() { }
 
   ngOnInit() {
