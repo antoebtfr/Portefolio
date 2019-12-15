@@ -1,0 +1,48 @@
+#body {
+  height: 50vh;
+  background-color: #252525;
+  border-top: white solid 4px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+#cadre-picture {
+  border: solid white 4px;
+  display: inline-block;
+  width: 15vw;
+  height: 15vw;
+  overflow: hidden;
+  background-image: url(../../../assets/picture-recadred.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  top: -7.5vw;
+  cursor: pointer;
+}
+#languages {
+  width: 30vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.language{
+    background-color: #252525;
+    color: white;
+    height: 4vh;
+    padding: 0 15px;
+    margin: 0 10px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: solid white 2px;
+}
+
+#cadre-languages {
+  width: 100vw;
+  position: relative;
+  top: -7.5vw;
+  display: flex;
+  justify-content: center;
+}
