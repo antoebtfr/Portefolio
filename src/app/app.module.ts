@@ -1,3 +1,4 @@
+import { VariablesGlobales } from './variableGlobales';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -6,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProfilComponent } from './components/profil/profil.component';
+import { SideComponent } from './components/side/side.component';
 
 @NgModule({
   declarations: [
@@ -13,12 +15,13 @@ import { ProfilComponent } from './components/profil/profil.component';
     HomepageComponent,
     NavbarComponent,
     ProfilComponent,
+    SideComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [VariablesGlobales],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

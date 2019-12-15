@@ -2,19 +2,19 @@ import { VariablesGlobales } from './../../variableGlobales';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  selector: 'app-side',
+  templateUrl: './side.component.html',
+  styleUrls: ['./side.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class SideComponent implements OnInit {
 
   constructor(public varGlo: VariablesGlobales) { }
 
   ngOnInit() {
   }
 
-  openSide() {
-    this.varGlo.sideStatus = true;
+  closeSideBar() {
+    this.varGlo.sideStatus = false;
   }
 
 }

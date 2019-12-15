@@ -7,3 +7,10 @@
     flex-flow: column wrap;
     justify-content: space-between;
 }
+
+app-side{
+    position: fixed;
+    top: 0px;
+    right :0px;
+    z-index: 15;
+}
