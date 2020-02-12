@@ -1,0 +1,11 @@
+<section id='body'>
+        <div id="trier"></div>
+    <div class="container">
+        <div *ngFor="let application of arrayApplications" class="application">
+            <div class="application-name"> {{application.name}} </div>
+            <a href="{{application.link}}">
+                <div class="application-img" style.background-image="url({{application.img}})"></div>
+            </a>
+        </div>
+    </div>
+</section>

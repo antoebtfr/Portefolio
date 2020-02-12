@@ -27,21 +27,21 @@
   justify-content: center;
 }
 
-.language{
-    background-color: #252525;
-    color: white;
-    height: 4vh;
-    padding: 0 15px;
-    margin: 0 10px ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    border: solid white 2px;
-    transition: 0.3s;
+.language {
+  background-color: #252525;
+  color: white;
+  height: 4vh;
+  padding: 0 15px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: solid white 2px;
+  transition: 0.3s;
 }
 
-.language:hover{
+.language:hover {
   background-color: #fff;
   color: black;
 }
@@ -54,7 +54,7 @@
   justify-content: center;
 }
 
-#bio{
+#bio {
   width: 100vw;
   position: relative;
   top: -7.5vw;
@@ -64,16 +64,16 @@
   font-style: italic;
 }
 
-#particles-js{
+#particles-js {
   position: fixed;
-  width:100%;
+  width: 100%;
 }
 
-.arrow{
+.arrow {
   width: 3vw;
   height: 3vw;
   position: fixed;
-  background-color: rgba(25,25,25,0.9);
+  background-color: rgba(25, 25, 25, 0.9);
   border-radius: 50%;
   border: solid white 2px;
   display: flex;
@@ -87,12 +87,12 @@
   z-index: 10;
 }
 
-.arrow:hover{
+.arrow:hover {
   color: black;
   background-color: white;
 }
 
-.arrow:hover::before{
+.arrow:hover::before {
   content: "";
   top: 0;
   left: 0;
@@ -104,31 +104,19 @@
   border: solid white 2px;
 }
 
-#right.arrow{
+#right.arrow {
   right: 3vw;
 }
 
-#left.arrow{
+#left.arrow {
   left: 3vw;
 }
 
+// Functions
+
 @keyframes ripple {
-  100%{
+  100% {
     transform: scale(2);
     opacity: 0;
   }
-}
-
-.trigger{
-  width: 30%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-}
-.trigger.right{
-  right:0;
-}
-
-.trigger.left{
-  left:0;
 }

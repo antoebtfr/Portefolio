@@ -8,6 +8,8 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProfilComponent } from './components/profil/profil.component';
 import { SideComponent } from './components/side/side.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ApplicationListComponent } from './components/application-list/application-list.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { SideComponent } from './components/side/side.component';
     NavbarComponent,
     ProfilComponent,
     SideComponent,
+    ProjectsComponent,
+    ApplicationListComponent,
   ],
   imports: [
     BrowserModule,

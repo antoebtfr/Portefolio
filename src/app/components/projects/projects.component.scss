@@ -1,0 +1,21 @@
+#body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(https://c.pxhere.com/images/88/90/3828c686f37a72dc3f292eef6e55-1420068.jpg!d);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+#body h2 {
+    height:15vh;
+    font-size: 2.5em;
+    background-color: #252525;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15vh;
+}
