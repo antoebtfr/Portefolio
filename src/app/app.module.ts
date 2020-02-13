@@ -1,6 +1,7 @@
 import { VariablesGlobales } from './variableGlobales';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { ProfilComponent } from './components/profil/profil.component';
 import { SideComponent } from './components/side/side.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ApplicationListComponent } from './components/application-list/application-list.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -20,10 +22,12 @@ import { ApplicationListComponent } from './components/application-list/applicat
     SideComponent,
     ProjectsComponent,
     ApplicationListComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [VariablesGlobales],
   bootstrap: [AppComponent]
