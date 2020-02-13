@@ -1,3 +1,4 @@
+import { Language } from './../../shared/class/language';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,17 @@ export class ProfilComponent implements OnInit {
   // Variables
   public left = false;
   public rigth = false;
-  public languages = ['HTML', 'CSS', 'JavaScript' , 'NodeJS', 'PHP', 'Python', 'C', 'Angular', 'SQL'];
+  public languages: Language[] = [
+    { name: 'HTML', color: 'orange' },
+    { name: 'CSS', color: 'blue' },
+    { name: 'JavaScript', color: 'yellow' },
+    { name: 'NodeJS', color: 'green' },
+    { name: 'PHP', color: 'purple' },
+    { name: 'Python', color: 'grey' },
+    { name: 'C', color: 'grey' },
+    { name: 'Angular', color: 'red' },
+    { name: 'SQL', color : 'lightgreen'}
+  ];
   constructor() { }
 
   ngOnInit() {
@@ -21,5 +32,9 @@ export class ProfilComponent implements OnInit {
 
   toggleSideRight() {
     this.rigth = !this.rigth;
+  }
+
+  chanceColor(elementId: string, elementColor: string) {
+    document.getElementById(elementId).style.backgroundColor = elementColor;
   }
 }

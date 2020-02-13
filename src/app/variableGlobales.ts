@@ -2,5 +2,7 @@
 import { Injectable } from '@angular/core';
 @Injectable()
 export class VariablesGlobales {
-  sideStatus = true;
+  sideStatus = false;
 }
+
+/* needfix : Fonction sécurisé */
