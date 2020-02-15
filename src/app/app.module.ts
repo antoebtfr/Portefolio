@@ -12,6 +12,7 @@ import { SideComponent } from './components/side/side.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ApplicationListComponent } from './components/application-list/application-list.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { ExperiencesComponent } from './pages/experiences/experiences.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     ProjectsComponent,
     ApplicationListComponent,
     ContactFormComponent,
+    ExperiencesComponent,
   ],
   imports: [
     BrowserModule,
