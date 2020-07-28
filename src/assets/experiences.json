@@ -1,18 +1,18 @@
 [
+  {
+    "intitule": "Tableau de Bord ",
+    "place": "DSI - Pôle Emploi (Wild Code School Project)",
+    "text": "Création en équipe de 4 d'un tableau de bord récupérant des données sur les sites de Jenkins et Sonarqube afin d'afficher des métriques. Mise en place en place de test unitaires et End-to-End afin de d'augmenter la maintenabilité de l'application.",
+    "beginningDate": "Janvier - 2020",
+    "endDate": "Février - 2020",
+    "usedTechnos": "Angular, SonarQube, Jenkins, Protactor, Mocha"
+  },
     {
         "intitule": "Gestionnaire de veille",
         "place": "Wild Code School",
         "text": "Création d'un gestionnaire de veilles interne à une enseigne. La mission consistait à créer un gestionnaire de veilles web en liaison avec une base de données pour que les membres de l'enseigne puissent ajouter, modifier et supprimer des veilles. Des fonctionnalités ont également mise en place pour que les utilisateurs puissent ajouter des articles à une liste de favoris personnelle, ajouter des commentaires ou juste voir les nouvelles veilles grâce à un slider sur leur écran d'accueil. L'application était accessible après la validation des identifiants par un portail d'authentification.",
         "beginningDate": "Octobre - 2019",
         "endDate": "Novembre - 2019",
-        "usedTechnos": "Angular"
-    },
-    {
-        "intitule": "Creation jeu 24h",
-        "place": "Wild Code School",
-        "text": "Développement d'un jeu vidéo web en 24h dans un groupe de 4 personnes sous le cadre d'un projet événementiel concernant Hallowen de la Wild Code School .",
-        "beginningDate": "Octobre - 2019",
-        "endDate": "Octobre - 2019",
         "usedTechnos": "Angular"
     },
     {
