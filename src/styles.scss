@@ -7,8 +7,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -19,7 +19,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -41,4 +41,48 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+.arrow {
+  width: 3vw;
+  height: 3vw;
+  position: fixed;
+  background-color: rgba(25, 25, 25, 0.9);
+  border-radius: 50%;
+  border: solid white 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  top: 25.75vw;
+  font-size: 1.2em;
+  transition: 0.8s;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow:hover {
+  color: black;
+  background-color: white;
+}
+
+.arrow:hover::before {
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  animation: ripple 2s linear infinite;
+  border-radius: 50%;
+  border: solid white 2px;
+}
+
+// Functions
+
+@keyframes ripple {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }

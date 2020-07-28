@@ -68,41 +68,6 @@
   width: 100%;
 }
 
-.arrow {
-  width: 3vw;
-  height: 3vw;
-  position: fixed;
-  background-color: rgba(25, 25, 25, 0.9);
-  border-radius: 50%;
-  border: solid white 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  top: 25.75vw;
-  font-size: 1.2em;
-  transition: 0.8s;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.arrow:hover {
-  color: black;
-  background-color: white;
-}
-
-.arrow:hover::before {
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  animation: ripple 2s linear infinite;
-  border-radius: 50%;
-  border: solid white 2px;
-}
-
 #right.arrow {
   right: 3vw;
 }
@@ -111,14 +76,7 @@
   left: 3vw;
 }
 
-// Functions
 
-@keyframes ripple {
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
+/* Arrows properties > style.css */
 
 /* needfix : Couleur par language */
