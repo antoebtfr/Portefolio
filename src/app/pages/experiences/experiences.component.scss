@@ -19,7 +19,26 @@
 }
 
 .experience {
-  background-color: blue;
+  background-color: #242425;
+  margin-bottom: 3vh;
+  border-radius: 20px;
+  padding: 3vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.experience-container{
+  width: 70%;
+}
+
+.experience-picture {
+  width: 20%;
+  height: 20vh;
+  background-image: url(https://avatars2.githubusercontent.com/u/8874047?s=280&v=4);
+  background-position: center;
+  background-size: cover;
 }
 
 .experience .intitule {
@@ -32,6 +51,11 @@
 
 .experience .text{
     font-size: 1em;
+    margin-bottom: 2vh;
+}
+
+.experience .usedTechnos{
+  font-size: 1.2em;
 }
 
 .experience .intitule,

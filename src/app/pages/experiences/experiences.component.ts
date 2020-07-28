@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Experience } from 'src/app/shared/class/experience';
+import { ExperienceService } from 'src/app/shared/service/experience.service';
 
 @Component({
   selector: 'app-experiences',
@@ -10,9 +11,10 @@ export class ExperiencesComponent implements OnInit {
 
   public arrayExperiences: Experience[] = [];
 
-  constructor() { }
+  constructor(private expService: ExperienceService) { }
 
   ngOnInit() {
+    this.expService.getAllExperiences().subscribe(data => this.arrayExperiences = data);
   }
 
 }

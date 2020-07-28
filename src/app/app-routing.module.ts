@@ -6,7 +6,8 @@ import { ExperiencesComponent } from './pages/experiences/experiences.component'
 
 
 const routes: Routes = [
-  { path: 'in-progress', component: ExperiencesComponent },
+  { path: 'experiences', component: ExperiencesComponent },
+  { path: 'projects', component: ProjectsComponent},
   { path: '', component: HomepageComponent }
 ];
 

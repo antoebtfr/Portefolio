@@ -1,10 +1,13 @@
 <section id='body'>
     <div class="container">
         <div *ngFor="let experience of arrayExperiences" class="experience">
-            <div class="intitule"> {{experience.intitule}}</div>
-            <div class="place"> {{experience.place}}</div>
-            <div class="text"> {{experience.text}}
+            <div class="experience-container">
+                <div class="intitule"> {{experience.intitule}}</div>
+                <div class="place"> {{experience.place}}</div>
+                <div class="text"> {{experience.text}}</div>
+                <div class="usedTechnos"> Techno(s) utilisée(s) : {{experience.usedTechnos}} </div>
             </div>
+            <div class="experience-picture"> </div>
         </div>
     </div>
 </section>

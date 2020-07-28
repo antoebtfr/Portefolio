@@ -2,7 +2,7 @@
 <section id="body">
         <div id="cadre-picture"></div>
         <div id="bio">
-            Antonain - 19 ans - Bordeaux
+            Antonain - {{age}} ans - Bordeaux
         </div>
         <div id="cadre-languages">
             <ul id="languages">
@@ -13,8 +13,8 @@
         </div>
 
 <!--         Only fixed elements -->
-        <div class="arrow" id="right">></div>
-        <div class="arrow" id="left"><</div>
+        <div class="arrow" id="right" [routerLink]="['../experiences']">></div>
+        <div class="arrow" id="left" [routerLink]="['../projects']"><</div>
 
 </section>
 

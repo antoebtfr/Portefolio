@@ -10,6 +10,7 @@ export class ProfilComponent implements OnInit {
   // Variables
   public left = false;
   public rigth = false;
+  public age: number;
   public languages: Language[] = [
     { name: 'HTML', color: 'orange' },
     { name: 'CSS', color: 'blue' },
@@ -19,11 +20,14 @@ export class ProfilComponent implements OnInit {
     { name: 'Python', color: 'grey' },
     { name: 'C', color: 'grey' },
     { name: 'Angular', color: 'red' },
-    { name: 'SQL', color : 'lightgreen'}
+    { name: 'SQL', color: 'lightgreen' }
   ];
-  constructor() { }
+
+
+  constructor() {}
 
   ngOnInit() {
+    this.age = this.ageCalculator();
   }
 
   toggleSideLeft() {
@@ -36,5 +40,19 @@ export class ProfilComponent implements OnInit {
 
   chanceColor(elementId: string, elementColor: string) {
     document.getElementById(elementId).style.backgroundColor = elementColor;
+  }
+
+  private ageCalculator = () => {
+    const birthday = new Date('August 12, 00 3:35:00 GMT');
+    const dateNow = new Date();
+    let age: number;
+    let year = birthday.getFullYear();
+
+    for (let i = 0; birthday < dateNow; i++) {
+      year++;
+      birthday.setFullYear(year);
+      age = i;
+    }
+    return age;
   }
 }
