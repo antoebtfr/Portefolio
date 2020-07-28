@@ -1,5 +1,6 @@
+
 #body {
-  height: 100vh;
+  height: 93vh;
   width: 100vw;
   background-color: red;
   color: white;
@@ -27,6 +28,7 @@
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .experience-container{
@@ -61,4 +63,13 @@
 .experience .intitule,
 .experience .place {
   margin-bottom: 3vh;
+}
+
+a, a:visited{
+  color: white;
+  text-decoration: none;
+}
+
+.deadlink{
+  cursor: initial;
 }

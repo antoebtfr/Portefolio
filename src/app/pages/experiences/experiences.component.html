@@ -1,7 +1,10 @@
+<app-navbar></app-navbar>
+
 <section id='body'>
     <div class="container">
-        <div *ngFor="let experience of arrayExperiences" class="experience">
-            <div class="experience-container">
+    <a *ngFor="let experience of arrayExperiences" href="{{experience.link}}" target="_blank">
+        <div class="experience">
+            <div class="experience-container" [ngClass]="!experience.link ? 'deadlink' : '' ">
                 <div class="intitule"> {{experience.intitule}}</div>
                 <div class="place"> {{experience.place}}</div>
                 <div class="text"> {{experience.text}}</div>
@@ -9,5 +12,6 @@
             </div>
             <div class="experience-picture"> </div>
         </div>
+      </a>
     </div>
 </section>
