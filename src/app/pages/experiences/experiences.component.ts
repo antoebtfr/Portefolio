@@ -24,9 +24,9 @@ export class ExperiencesComponent implements OnInit {
     document.addEventListener('mousemove', (event) => {
       const mouseX = event.clientX;
       if (mouseX < 375) {
-        document.getElementById('left').style.opacity = '1';
+        document.getElementById('left-e').style.opacity = '1';
       } else {
-        document.getElementById('left').style.opacity = '0';
+        document.getElementById('left-e').style.opacity = '0';
       }
     } );
   }

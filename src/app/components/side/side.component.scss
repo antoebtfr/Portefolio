@@ -13,16 +13,16 @@
     transition: 0.8s ease-in-out;
     -webkit-transition: 0.8s ease-in-out;
   }
-  
+
   #menu-burger.isOpen {
     transform: translateX(0);
     -webkit-transform: translateX(0);
   }
-  
+
   #menu-burger ul {
     margin-left: 10px;
   }
-  
+
   #menu-burger ul li {
     margin: 10px 0;
   }
@@ -31,7 +31,7 @@
     text-decoration: none;
     text-transform: uppercase;
   }
-  
+
   #btn-burger {
     position: absolute;
     right: 0;
@@ -41,18 +41,18 @@
     transition: 0.8s;
     -webkit-transition: 0.8s;
   }
-  
+
   #btn-burger.isWhite {
     background: white;
   }
-  
+
   .barre {
     width: 30px;
     height: 4px;
     background: white;
     margin-bottom: 3px;
   }
-  
+
   #div-to-close{
     position: fixed;
     height: 100%;
@@ -65,8 +65,12 @@
     transition: 0.8s ease-in-out;
     -webkit-transition: 0.8s ease-in-out;
   }
-  
+
   #div-to-close.isOpen {
     transform: translateX(0);
     -webkit-transform: translateX(0);
+  }
+
+  #div-to-close, #menu-burger{
+    z-index: 100;
   }

@@ -26,10 +26,12 @@ app-navbar{
   width: 100vw;
 }
 
-#right{
+#right-e{
  right: 1vw;
  opacity: 0;
+z-index: 10;
 }
+
 
 /* Arrow properties > style.css */
 
