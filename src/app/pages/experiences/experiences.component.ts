@@ -8,15 +8,26 @@ import { ExperienceService } from 'src/app/shared/service/experience.service';
   styleUrls: ['./experiences.component.scss']
 })
 export class ExperiencesComponent implements OnInit {
-
   public arrayExperiences: Experience[] = [];
 
-  constructor(private expService: ExperienceService) { }
+  constructor(private expService: ExperienceService) {}
 
   ngOnInit() {
-    this.expService.getAllExperiences().subscribe(data => this.arrayExperiences = data);
+    this.expService
+      .getAllExperiences()
+      .subscribe(data => (this.arrayExperiences = data));
+
+    this.spotTheMouse();
   }
 
+  spotTheMouse() {
+    document.addEventListener('mousemove', (event) => {
+      const mouseX = event.clientX;
+      if (mouseX < 375) {
+        document.getElementById('left').style.opacity = '1';
+      } else {
+        document.getElementById('left').style.opacity = '0';
+      }
+    } );
+  }
 }
-
-

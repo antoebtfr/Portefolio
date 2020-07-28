@@ -10,6 +10,17 @@ export class ProjectsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.spotTheMouse();
+  }
+  spotTheMouse() {
+    document.addEventListener('mousemove', (event) => {
+      const mouseX = event.clientX;
+      if (mouseX > 1000) {
+        document.getElementById('right').style.opacity = '1';
+      } else {
+        document.getElementById('right').style.opacity = '0';
+      }
+    } );
   }
 
 }
