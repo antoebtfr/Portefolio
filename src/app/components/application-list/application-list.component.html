@@ -1,6 +1,21 @@
 <section id='body'>
-        <div id="trier"></div>
-    <div class="container">
+        <div id="trier">
+          <div id="seach-by-bame-container" class="container">
+            <label for="search-by-name">Par nom : </label>
+            <input type="text" id="search-by-name" name="search-by-name">
+          </div>
+
+          <div id="search-by-techno-container" class="container">
+            <label for="search-by-techno"> Par Techno : </label>
+            <select name="search-by-techno" id="search-by-techno">
+              <option>Angular</option>
+              <option>Javascript</option>
+              <option>React</option>
+              <option>C</option>
+            </select>
+          </div>
+        </div>
+    <div id="app-container">
         <div *ngFor="let application of arrayApplications" class="application">
             <div class="application-name"> {{application.name}} </div>
             <a href="{{application.link}}" target="_blank">
