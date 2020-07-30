@@ -1,6 +1,6 @@
 <section id='body'>
         <div id="trier">
-          <div id="seach-by-bame-container" class="container">
+          <div id="seach-by-name-container" class="container">
             <label for="search-by-name">Par nom : </label>
             <input type="text" id="search-by-name" name="search-by-name">
           </div>
@@ -16,7 +16,7 @@
           </div>
         </div>
     <div id="app-container">
-        <div *ngFor="let application of arrayApplications" class="application">
+        <div *ngFor="let application of showedArray" class="application">
             <div class="application-name"> {{application.name}} </div>
             <a href="{{application.link}}" target="_blank">
                 <div class="application-img" style.background-image="url({{application.img}})"></div>
