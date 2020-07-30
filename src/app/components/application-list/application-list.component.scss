@@ -10,7 +10,7 @@
   width: 100vw;
   height: 7vh;
   background-color: #252525;
-  border-bottom: solid white 0.5vh;
+  border-bottom: solid white 0.45vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -18,9 +18,8 @@
 }
 
 #app-container {
-  background-image: url(https://i.pinimg.com/originals/40/f5/6b/40f56b5bba91bf076a2826f0f90366f7.jpg);
-  background-size: cover;
-  width: 100vw;
+  background-color: #1b1a1af2;
+    width: 100vw;
   height: 59.5vh;
   display: flex;
   flex-flow: row wrap;
@@ -64,13 +63,13 @@
   background-color: #42404073;
   border-radius: 10px;
   color: white;
-  border: #f54242 2px solid;
+  border:2px solid #a55f51;
   padding-left: 0.5vw;
 }
 #search-by-techno {
   background-color: #252525;
   color: white;
   border-radius: 10px;
-  border: solid 2px #f54242;
+  border: solid 2px #a55f51;
   padding-left: 0.25vw;
 }
