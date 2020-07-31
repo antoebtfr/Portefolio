@@ -32,33 +32,46 @@ export class ApplicationListComponent implements OnInit {
     }
   ];
 
-  public showedArray;
+  public showedArray: Application[];
 
-  private searchByNameChange() {
+  private search() {
+    /* needfix */
+
+
+    const filter = () => {
+      if (techno === 'Toutes') {
+        this.showedArray = this.arrayApplications.filter(x =>
+          x.name.includes(name)
+        );
+      } else {
+        this.showedArray = this.arrayApplications.filter(x =>
+          x.usedTechnos.includes(techno)
+        );
+        this.showedArray = this.showedArray.filter(x => x.name.includes(name));
+      }
+    };
+
+    const techSelect = document.getElementById('search-by-techno');
     const searchInput = document.getElementById('search-by-name');
+    let techno: string;
+    let name: string;
+
+    techSelect.addEventListener('change', () => {
+      techno = techSelect.value;
+      name = searchInput.value;
+      filter();
+    });
+
     searchInput.oninput = () => {
-      this.showedArray = this.arrayApplications.filter(x =>
-        x.name.includes(searchInput.value)
-      );
+      techno = techSelect.value;
+      name = searchInput.value;
+      filter();
     };
   }
 
-  private searchByTechno() {
-    const techSelect = document.getElementById('search-by-techno');
-    techSelect.addEventListener('change', () => {
-      if (techSelect.value === 'Toutes') {
-        this.showedArray = this.arrayApplications;
-      } else {
-        this.showedArray = this.arrayApplications.filter(x =>
-          x.usedTechnos.includes(techSelect.value)
-        );
-      }
-    });
-  }
 
   ngOnInit() {
-    this.searchByNameChange();
-    this.searchByTechno();
+    this.search();
     this.showedArray = this.arrayApplications.sort((a, b) =>
       a.name > b.name ? 1 : -1
     );
