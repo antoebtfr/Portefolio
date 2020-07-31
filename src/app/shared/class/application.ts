@@ -3,6 +3,9 @@ export class Application {
     img: string;
     link: string;
     usedTechnos: string[];
+    realisationTime: string;
+    dateOfRealisation: number;
+
      constructor(input?) {
         Object.assign(input);
      }
