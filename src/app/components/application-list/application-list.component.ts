@@ -10,10 +10,11 @@ import { projects } from '../../../assets/data/project';
 export class ApplicationListComponent implements OnInit {
   constructor() {}
 
-  private arrayApplications: Application[];
-  public showedArray: Application[];
+  private arrayApplications: Application[]; // Array containing all applications
+  public showedArray: Application[]; // Displayed array
+  public technoArray: string[] = []; // Array containing all technos
 
-  private search(): void {
+  private search(): void { // Change applications displayed when select or input change
 
     const filter = () => {
       if (techno === 'Toutes') {
@@ -46,12 +47,25 @@ export class ApplicationListComponent implements OnInit {
     };
   }
 
+  private retrieveTechno() { // Retrieve all technos of all of the applications
+
+    for (const item of this.arrayApplications) {
+      for (const techno of item.usedTechnos) {
+        if (this.technoArray.includes(techno) === false) {
+          this.technoArray.push(techno);
+        }
+      }
+    }
+  }
+
 
   ngOnInit() {
     this.arrayApplications = projects;
     this.showedArray = this.arrayApplications.sort((a, b) =>
       a.name > b.name ? 1 : -1
     );
+
     this.search();
+    this.retrieveTechno();
   }
 }

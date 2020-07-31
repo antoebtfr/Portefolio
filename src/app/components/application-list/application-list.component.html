@@ -9,10 +9,7 @@
             <label for="search-by-techno"> Par Techno : </label>
             <select name="search-by-techno" id="search-by-techno">
               <option>Toutes</option>
-              <option>Angular</option>
-              <option>Javascript</option>
-              <option>React</option>
-              <option>C</option>
+            <option *ngFor="let techno of technoArray">{{techno}}</option>
             </select>
           </div>
         </div>
