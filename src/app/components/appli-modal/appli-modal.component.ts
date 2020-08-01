@@ -1,3 +1,5 @@
+import { Application } from './../../shared/class/application';
+import { VariablesGlobales } from './../../variableGlobales';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppliModalComponent implements OnInit {
 
-  constructor() { }
+  public showedApp: Application;
+
+  constructor(private varGlo: VariablesGlobales) { }
 
   ngOnInit() {
+    this.showedApp = this.varGlo.createApp();
   }
 
 }
