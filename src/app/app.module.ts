@@ -14,6 +14,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ApplicationListComponent } from './components/application-list/application-list.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { ExperiencesComponent } from './pages/experiences/experiences.component';
+import { AppliModalComponent } from './components/appli-modal/appli-modal.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ExperiencesComponent } from './pages/experiences/experiences.component'
     ApplicationListComponent,
     ContactFormComponent,
     ExperiencesComponent,
+    AppliModalComponent,
   ],
   imports: [
     BrowserModule,

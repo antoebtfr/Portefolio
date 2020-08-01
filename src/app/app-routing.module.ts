@@ -1,3 +1,4 @@
+import { AppliModalComponent } from './components/appli-modal/appli-modal.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,8 @@ import { ExperiencesComponent } from './pages/experiences/experiences.component'
 const routes: Routes = [
   { path: 'experiences', component: ExperiencesComponent },
   { path: 'projects', component: ProjectsComponent},
-  { path: '', component: HomepageComponent }
+  { path: '', component: HomepageComponent },
+  { path: 'ip', component: AppliModalComponent}
 ];
 
 @NgModule({
