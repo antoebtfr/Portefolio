@@ -1,6 +1,6 @@
 <section id="modal-body">
   <section id="appli-info-container">
-    <p id="close-cross">X</p>
+    <p id="close-cross" (click)="closeAppModal()">X</p>
    <h2 id="appli-name"> {{showedApp.name}} </h2>
   <img src="{{showedApp.img}}">
    <div id='button-container'>
@@ -9,3 +9,4 @@
    </div>
   </section>
 </section>
+
