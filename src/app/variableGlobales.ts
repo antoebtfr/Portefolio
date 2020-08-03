@@ -9,15 +9,19 @@ export class VariablesGlobales {
   private appImg: string;
   private appCodeLink: string;
   private appSiteLink: string;
-  private appUsedTechnos: [];
+  private appUsedTechnos: string[];
   private appRealisationTime: string;
   private appDateOfRealisation: number;
 
-  public changeApp(name: string, image: string, codeLink: string, siteLink: string) {
+  public changeApp(name: string, image: string, codeLink: string, siteLink: string, usedTechno: string[],
+                   realisationTime: string, dateOfRealisation: number) {
     this.appName = name;
     this.appImg = image;
-    this.appCodeLink = image;
-    this.appSiteLink = image;
+    this.appCodeLink = codeLink;
+    this.appSiteLink = siteLink;
+    this.appUsedTechnos = usedTechno;
+    this.appRealisationTime = realisationTime;
+    this.appDateOfRealisation = dateOfRealisation;
 
     this.createApp();
   }
