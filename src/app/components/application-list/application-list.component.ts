@@ -71,8 +71,15 @@ export class ApplicationListComponent implements OnInit {
     };
   }
 
-  public appModalStatus() {
+  public openAppModal(app: Application) {
     this.varGlo.toggleAppModalStatus();
-    console.log(this.varGlo.getAppModalStatus());
+    this.transferAppData(app);
+    console.log(app);
   }
+
+  private transferAppData(app: Application) {
+    this.varGlo.changeApp(app);
+  }
+
+
 }

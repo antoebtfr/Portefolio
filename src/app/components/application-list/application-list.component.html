@@ -14,7 +14,7 @@
           </div>
         </div>
     <div id="app-container">
-        <div *ngFor="let application of showedArray" (click)="appModalStatus()" class="application">
+        <div *ngFor="let application of showedArray" (click)="openAppModal(application)" class="application">
             <div class="application-name"> {{application.name}} </div>
                 <div class="application-img" style.background-image="url({{application.img}})"></div>
         </div>

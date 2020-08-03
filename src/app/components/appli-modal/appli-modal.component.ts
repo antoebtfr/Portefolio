@@ -9,16 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppliModalComponent implements OnInit {
 
-  public showedApp: Application;
-
   constructor(private varGlo: VariablesGlobales) { }
 
   ngOnInit() {
-    this.showedApp = this.varGlo.createApp();
   }
 
   public closeAppModal() {
     this.varGlo.toggleAppModalStatus();
+  }
+
+  public showedApp(): Application {
+    return this.varGlo.createApp();
   }
 
 }
