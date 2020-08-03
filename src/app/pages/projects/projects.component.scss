@@ -26,6 +26,14 @@ app-navbar {
   width: 100vw;
 }
 
+app-appli-modal{
+  display: none;
+}
+
+app-appli-modal.open{
+  display: inherit;
+}
+
 #right-e {
   right: 1vw;
   opacity: 0;
@@ -36,4 +44,7 @@ app-navbar {
 #right-e:hover{
   color: white;
 }
+
 /* Arrow properties > style.css */
+
+

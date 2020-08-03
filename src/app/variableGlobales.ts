@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class VariablesGlobales {
   public sideStatus = false;
+  private appModalStatus = false;
 
   private appName: string;
   private appImg: string;
@@ -13,8 +14,15 @@ export class VariablesGlobales {
   private appRealisationTime: string;
   private appDateOfRealisation: number;
 
-  public changeApp(name: string, image: string, codeLink: string, siteLink: string, usedTechno: string[],
-                   realisationTime: string, dateOfRealisation: number) {
+  public changeApp(
+    name: string,
+    image: string,
+    codeLink: string,
+    siteLink: string,
+    usedTechno: string[],
+    realisationTime: string,
+    dateOfRealisation: number
+  ) {
     this.appName = name;
     this.appImg = image;
     this.appCodeLink = codeLink;
@@ -34,9 +42,16 @@ export class VariablesGlobales {
       siteLink: this.appSiteLink,
       usedTechnos: this.appUsedTechnos,
       realisationTime: this.appRealisationTime,
-      dateOfRealisation: this.appDateOfRealisation,
-
+      dateOfRealisation: this.appDateOfRealisation
     };
+  }
+
+  public getAppModalStatus() {
+    return this.appModalStatus;
+  }
+
+  public toggleAppModalStatus() {
+    this.appModalStatus = !this.appModalStatus;
   }
 }
 

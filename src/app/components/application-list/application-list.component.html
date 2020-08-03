@@ -14,11 +14,9 @@
           </div>
         </div>
     <div id="app-container">
-        <div *ngFor="let application of showedArray" class="application">
+        <div *ngFor="let application of showedArray" (click)="appModalStatus()" class="application">
             <div class="application-name"> {{application.name}} </div>
-            <a href="{{application.link}}" target="_blank">
                 <div class="application-img" style.background-image="url({{application.img}})"></div>
-            </a>
         </div>
     </div>
 </section>

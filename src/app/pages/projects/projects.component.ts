@@ -1,3 +1,4 @@
+import { VariablesGlobales } from './../../variableGlobales';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private varGlo: VariablesGlobales) { }
 
   ngOnInit() {
     this.spotTheMouse();
   }
-  spotTheMouse() {
+  private spotTheMouse() {
     document.addEventListener('mousemove', (event) => {
       const mouseX = event.clientX;
       if (mouseX > 1000) {
@@ -21,6 +22,10 @@ export class ProjectsComponent implements OnInit {
         document.getElementById('right-e').style.opacity = '0';
       }
     } );
+  }
+
+  public AppModalStatus() {
+   return this.varGlo.getAppModalStatus();
   }
 
 }

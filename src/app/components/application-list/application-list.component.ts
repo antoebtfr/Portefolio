@@ -1,3 +1,4 @@
+import { VariablesGlobales } from './../../variableGlobales';
 import { Component, OnInit } from '@angular/core';
 import { Application } from 'src/app/shared/class/application';
 import { projects } from '../../../assets/data/project';
@@ -8,13 +9,36 @@ import { projects } from '../../../assets/data/project';
   styleUrls: ['./application-list.component.scss']
 })
 export class ApplicationListComponent implements OnInit {
-  constructor() {}
+  constructor(private varGlo: VariablesGlobales) {}
 
   private arrayApplications: Application[]; // Array containing all applications
   public showedArray: Application[]; // Displayed array
   public technoArray: string[] = []; // Array containing all technos
 
-  private search(): void { // Change applications displayed when select or input change
+  ngOnInit() {
+    this.arrayApplications = projects;
+    this.showedArray = this.arrayApplications.sort((a, b) =>
+      a.name > b.name ? 1 : -1
+    );
+
+    this.search();
+    this.retrieveTechno();
+  }
+
+  private retrieveTechno() {
+    // Retrieve all technos of all of the applications
+
+    for (const item of this.arrayApplications) {
+      for (const techno of item.usedTechnos) {
+        if (this.technoArray.includes(techno) === false) {
+          this.technoArray.push(techno);
+        }
+      }
+    }
+  }
+
+  private search(): void {
+    // Change applications displayed when select or input change
 
     const filter = () => {
       if (techno === 'Toutes') {
@@ -47,25 +71,8 @@ export class ApplicationListComponent implements OnInit {
     };
   }
 
-  private retrieveTechno() { // Retrieve all technos of all of the applications
-
-    for (const item of this.arrayApplications) {
-      for (const techno of item.usedTechnos) {
-        if (this.technoArray.includes(techno) === false) {
-          this.technoArray.push(techno);
-        }
-      }
-    }
-  }
-
-
-  ngOnInit() {
-    this.arrayApplications = projects;
-    this.showedArray = this.arrayApplications.sort((a, b) =>
-      a.name > b.name ? 1 : -1
-    );
-
-    this.search();
-    this.retrieveTechno();
+  public appModalStatus() {
+    this.varGlo.toggleAppModalStatus();
+    console.log(this.varGlo.getAppModalStatus());
   }
 }
