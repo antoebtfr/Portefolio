@@ -1,7 +1,7 @@
 #modal-body{
   height: 100vh;
   width: 100vw;
-  background-color: rgba(93, 92, 92, 0.459);
+  background-color: rgba(0, 0, 0, 0.774);
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -20,6 +20,7 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 #close-cross{
@@ -75,3 +76,8 @@ a, a:visited{
   text-decoration: none;
 }
 
+.div-to-close{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
