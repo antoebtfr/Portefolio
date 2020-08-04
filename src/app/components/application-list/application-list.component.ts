@@ -14,6 +14,7 @@ export class ApplicationListComponent implements OnInit {
   private arrayApplications: Application[]; // Array containing all applications
   public showedArray: Application[]; // Displayed array
   public technoArray: string[] = []; // Array containing all technos
+  public dateArray: number[] = [];
 
   ngOnInit() {
     this.arrayApplications = projects;
@@ -33,42 +34,75 @@ export class ApplicationListComponent implements OnInit {
         if (this.technoArray.includes(techno) === false) {
           this.technoArray.push(techno);
         }
+
+        if (this.dateArray.includes(item.dateOfRealisation) === false) {
+          this.dateArray.push(item.dateOfRealisation);
+        }
       }
     }
+
+    this.dateArray.sort((a, b) => b - a);
+    console.log(this.dateArray);
   }
 
   private search(): void {
     // Change applications displayed when select or input change
 
     const filter = () => {
-      if (techno === 'Toutes') {
+      if (techno === 'Toutes' && date === 'Toutes') {
         this.showedArray = this.arrayApplications.filter(x =>
           x.name.includes(name)
         );
+      } else if (techno === 'Toutes' && date !== 'Toutes') {
+        this.showedArray = this.arrayApplications.filter(x =>
+          x.name.includes(name)
+        );
+        this.showedArray = this.showedArray.filter(
+          x => x.dateOfRealisation === Number(date)
+        );
+      } else if (techno !== 'Toutes' && date === 'Toutes') {
+        this.showedArray = this.arrayApplications.filter(x =>
+          x.usedTechnos.includes(techno)
+        );
+        this.showedArray = this.showedArray.filter(x => x.name.includes(name));
       } else {
         this.showedArray = this.arrayApplications.filter(x =>
           x.usedTechnos.includes(techno)
         );
         this.showedArray = this.showedArray.filter(x => x.name.includes(name));
+        this.showedArray = this.showedArray.filter(
+          x => x.dateOfRealisation === Number(date)
+        );
       }
     };
 
     const techSelect = document.getElementById('search-by-techno');
     const searchInput = document.getElementById('search-by-name');
+    const dateSelect = document.getElementById('search-by-date');
     let techno: string;
     let name: string;
+    let date: number | string;
 
     techSelect.addEventListener('change', () => {
       techno = techSelect.value;
       name = searchInput.value;
+      date = dateSelect.value;
       filter();
     });
 
     searchInput.oninput = () => {
       techno = techSelect.value;
       name = searchInput.value;
+      date = dateSelect.value;
       filter();
     };
+
+    dateSelect.addEventListener('change', () => {
+      techno = techSelect.value;
+      name = searchInput.value;
+      date = dateSelect.value;
+      filter();
+    });
   }
 
   public openAppModal(app: Application) {
@@ -80,6 +114,4 @@ export class ApplicationListComponent implements OnInit {
   private transferAppData(app: Application) {
     this.varGlo.changeApp(app);
   }
-
-
 }
