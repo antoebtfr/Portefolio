@@ -21,6 +21,11 @@
   backdrop-filter: blur(8px);
 }
 
+app-application-list{
+  position: relative;
+  bottom: 1vh;
+}
+
 app-navbar {
   position: fixed;
   width: 100vw;
