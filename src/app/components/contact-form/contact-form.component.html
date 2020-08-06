@@ -1,12 +1,16 @@
 <section id='body'>
-    <form [formGroup]="contactForm">
+    <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
         <div id="email-container">
             <label for="email"> Your Email </label>
-            <input type="email" id="email" name="email" placeholder="example.com">
+            <input type="email" id="email" name="email" placeholder="DoeJohn@example.com" formControlName="email">
         </div>
-        <textarea id="text-area">
 
-        </textarea>
-        <button type="submit"> Envoyer </button>
+        <div id="subject-container">
+            <input type="text" id="subject" name="subject" placeholder="Subject" formControlName="subject">
+        </div>
+        
+        
+        <textarea id="text-area" formControlName="text"></textarea>
+        <button type="submit" [disabled]="!contactForm.valid" [ngClass]="!contactForm.valid ? 'invalid' : ''"> Envoyer </button>
     </form>
 </section>

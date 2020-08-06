@@ -14,7 +14,7 @@ form{
 
 textarea{
   width: 80%;
-  height: 50%;
+  height: 40%;
   border-radius: 20px;
   border: solid white 2px;
   background-color: #00000026;
@@ -23,7 +23,7 @@ textarea{
   padding: 1vh;
 }
 
-#email-container{
+#email-container, #subject-container{
   width: 80%;
   height: 20%;
   display: flex;
@@ -62,4 +62,14 @@ button {
 
 button:hover {
   background-color: green;
+}
+
+button.invalid{
+  color: grey;
+  border-color: grey; 
+  cursor: not-allowed;
+}
+
+button.invalid:hover{
+  background-color: inherit;
 }
