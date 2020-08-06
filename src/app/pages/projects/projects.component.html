@@ -2,9 +2,11 @@
 <app-side></app-side>
 <app-appli-modal [ngClass]="AppModalStatus() ? 'open' : ''"></app-appli-modal>
 
-<section id='body'>
-    <h2> Mes Projets personels </h2>
-    <app-application-list></app-application-list>
-    
-    <div class="arrow" id="right-e" [routerLink]="['']">></div>
+<section id="body">
+  <h2>Mes Projets personels</h2>
+  <app-application-list></app-application-list>
+
+  <a href=""
+    ><div class="arrow" id="right-e">></div>
+  </a>
 </section>
