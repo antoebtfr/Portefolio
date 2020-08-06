@@ -1,22 +1,37 @@
-<section id='body'>
-        <div id="trier">
-          <div id="seach-by-name-container" class="container">
-            <label for="search-by-name">Par nom : </label>
-            <input type="text" id="search-by-name" name="search-by-name">
-          </div>
-
-          <div id="search-by-techno-container" class="container">
-            <label for="search-by-techno"> Par Techno : </label>
-            <select name="search-by-techno" id="search-by-techno">
-              <option>Toutes</option>
-            <option *ngFor="let techno of technoArray">{{techno}}</option>
-            </select>
-          </div>
-        </div>
-    <div id="app-container">
-        <div *ngFor="let application of showedArray" (click)="openAppModal(application)" class="application">
-            <div class="application-name"> {{application.name}} </div>
-                <div class="application-img" style.background-image="url({{application.img}})"></div>
-        </div>
+<section id="body">
+  <div id="trier">
+    <div id="search-by-name-container" class="container">
+      <label for="search-by-name">Par nom : </label>
+      <input type="text" id="search-by-name" name="search-by-name" />
     </div>
+
+    <div id="search-by-techno-container" class="container">
+      <label for="search-by-techno"> Par Techno : </label>
+      <select name="search-by-techno" id="search-by-techno">
+        <option>Toutes</option>
+        <option *ngFor="let techno of technoArray">{{ techno }}</option>
+      </select>
+    </div>
+
+    <div id="search-by-date-container" class="container">
+      <label for="search-by-date"> Par date : </label>
+      <select name="search-by-date" id="search-by-date">
+        <option>Toutes</option>
+        <option *ngFor="let date of dateArray">{{ date }}</option>
+      </select>
+    </div>
+  </div>
+  <div id="app-container">
+    <div
+      *ngFor="let application of showedArray"
+      (click)="openAppModal(application)"
+      class="application"
+    >
+      <div class="application-name">{{ application.name }}</div>
+      <div
+        class="application-img"
+        style.background-image="url({{ application.img }})"
+      ></div>
+    </div>
+  </div>
 </section>
