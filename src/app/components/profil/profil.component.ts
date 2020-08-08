@@ -1,3 +1,4 @@
+import { languageArray } from './../../../assets/data/language';
 import { Language } from './../../shared/class/language';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,17 +12,7 @@ export class ProfilComponent implements OnInit {
   public left = false;
   public rigth = false;
   public age: number;
-  public languages: Language[] = [
-    { name: 'HTML', color: 'orange' },
-    { name: 'CSS', color: 'blue' },
-    { name: 'JavaScript', color: 'yellow' },
-    { name: 'NodeJS', color: 'green' },
-    { name: 'PHP', color: 'purple' },
-    { name: 'Python', color: 'grey' },
-    { name: 'C', color: 'grey' },
-    { name: 'Angular', color: 'red' },
-    { name: 'SQL', color: 'lightgreen' }
-  ];
+  public languages: Language[] = languageArray;
 
 
   constructor() {}
@@ -30,20 +21,9 @@ export class ProfilComponent implements OnInit {
     this.age = this.ageCalculator();
   }
 
-  toggleSideLeft() {
-    this.left = !this.left;
-  }
-
-  toggleSideRight() {
-    this.rigth = !this.rigth;
-  }
-
-  chanceColor(elementId: string, elementColor: string) {
-    document.getElementById(elementId).style.backgroundColor = elementColor;
-  }
-
   private ageCalculator = () => {
-    const birthday = new Date('August 12, 00 3:35:00 GMT');
+    // tslint:disable-next-line: max-line-length
+    const birthday = new Date('August 12, 00 3:35:00 GMT'); // Bravo, tu as trouvé ma date d'anniversaire. Tu peux toujours me contacter pour me le souhaiter le jour venu :)
     const dateNow = new Date();
     let age: number;
     let year = birthday.getFullYear();
@@ -55,4 +35,5 @@ export class ProfilComponent implements OnInit {
     }
     return age;
   }
+
 }
