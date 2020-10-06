@@ -1,5 +1,5 @@
 import { VariablesGlobales } from './../../variableGlobales';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Application } from 'src/app/shared/class/application';
 import { projects } from '../../../assets/data/project';
 
@@ -76,9 +76,10 @@ export class ApplicationListComponent implements OnInit {
       }
     };
 
-    const techSelect = document.getElementById('search-by-techno');
-    const searchInput = document.getElementById('search-by-name');
-    const dateSelect = document.getElementById('search-by-date');
+    const techSelect =  document.getElementById('search-by-techno') as HTMLInputElement;
+    const searchInput = document.getElementById('search-by-name') as HTMLInputElement;
+    const dateSelect = document.getElementById('search-by-date') as HTMLInputElement;
+
     let techno: string;
     let name: string;
     let date: number | string;
