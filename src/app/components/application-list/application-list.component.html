@@ -1,22 +1,22 @@
 <section id="body">
   <div id="trier">
     <div id="search-by-name-container" class="container">
-      <label for="search-by-name">Par nom : </label>
+      <label for="search-by-name">Name : </label>
       <input type="text" id="search-by-name" name="search-by-name" />
     </div>
 
     <div id="search-by-techno-container" class="container">
-      <label for="search-by-techno"> Par Techno : </label>
+      <label for="search-by-techno"> Techno : </label>
       <select name="search-by-techno" id="search-by-techno">
-        <option>Toutes</option>
+        <option>All</option>
         <option *ngFor="let techno of technoArray">{{ techno }}</option>
       </select>
     </div>
 
     <div id="search-by-date-container" class="container">
-      <label for="search-by-date"> Par date : </label>
+      <label for="search-by-date"> Date : </label>
       <select name="search-by-date" id="search-by-date">
-        <option>Toutes</option>
+        <option>All</option>
         <option *ngFor="let date of dateArray">{{ date }}</option>
       </select>
     </div>

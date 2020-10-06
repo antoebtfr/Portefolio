@@ -49,18 +49,18 @@ export class ApplicationListComponent implements OnInit {
     // Change applications displayed when select or input change
 
     const filter = () => {
-      if (techno === 'Toutes' && date === 'Toutes') {
+      if (techno === 'All' && date === 'All') {
         this.showedArray = this.arrayApplications.filter(x =>
           x.name.includes(name)
         );
-      } else if (techno === 'Toutes' && date !== 'Toutes') {
+      } else if (techno === 'All' && date !== 'All') {
         this.showedArray = this.arrayApplications.filter(x =>
           x.name.includes(name)
         );
         this.showedArray = this.showedArray.filter(
           x => x.dateOfRealisation === Number(date)
         );
-      } else if (techno !== 'Toutes' && date === 'Toutes') {
+      } else if (techno !== 'All' && date === 'All') {
         this.showedArray = this.arrayApplications.filter(x =>
           x.usedTechnos.includes(techno)
         );
